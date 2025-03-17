@@ -1,0 +1,1 @@
+I am very fresh at coding in python, and only know how to make basic edits/changes. And i want this to be a community effort to make optimized ways to achieve a more seamless comfyui model generation without breaking the bank.
