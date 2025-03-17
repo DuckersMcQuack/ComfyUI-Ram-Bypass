@@ -69,13 +69,13 @@ class OverrideVAEDevice(OverrideDevice):
         return k
     
     RETURN_TYPES = ("VAE",)
-    TITLE = "Force/Set VAE Device"
+    TITLE = "Force/Set VAE Device with NVMe Cache"
 
     def patch(self, vae, device):
         return self.override(vae, "first_stage_model", torch.device(device))
 
 NODE_CLASS_MAPPINGS = {
-    "OverrideCLIPDevice": OverrideCLIPDevice,
-    "OverrideVAEDevice": OverrideVAEDevice,
+    "Offload-Clip-NVME": OverrideCLIPDevice,
+    "Offload-VAE-NVME": OverrideVAEDevice,
 }
 NODE_DISPLAY_NAME_MAPPINGS = {k:v.TITLE for k,v in NODE_CLASS_MAPPINGS.items()}
